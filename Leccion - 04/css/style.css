@@ -1,0 +1,17 @@
+dl{
+    width: 400px;
+}
+
+
+dd{
+    margin:0;
+    padding: 10px;
+}
+
+dt{
+    cursor:pointer;
+    font-size: 18px;
+    background-color: grey;
+    border-bottom: 1px solid rgb(99, 98, 98);
+    border-top: white;
+}
