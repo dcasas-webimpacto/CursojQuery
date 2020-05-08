@@ -1,7 +1,5 @@
 (function(){
-
 	var $cajaRoja = $(".cajaRoja");
-
 	$("#botonTamano").on("click",function(){
 		$cajaRoja.animate({
 			width: "+=100",
