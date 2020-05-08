@@ -1,7 +1,5 @@
 (function (){
     var $cajaRoja=$(".cajaRoja");
-
-
     function mover(dir){
         $cajaRoja.clearQueue();
         switch(dir){
@@ -33,7 +31,6 @@
                 },1000);
         }
     }
-
     $(document).on("keypress",function(e){
         var keyCode = e.keyCode;
         //console.log(keyCode);
@@ -52,16 +49,10 @@
             break;
             default:
                 mover("res");
-
-
         }
     });
-
-
     $("button").on("click",function(){
         var dir = $(this).data("dir");
         mover(dir);
     });
-
-
 })();
