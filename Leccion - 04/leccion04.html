@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 04 - Acordeones</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 04: Acordeones</h1>
+	<hr>
+
+
+
+	<div align="center">
+
+			<dl>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+				<dt>Titulo del acordeon</dt>
+				<dd>Este es el detalle del acordeon</dd>
+
+			</dl>
+
+
+
+	</div>
+
+
+
+</div>
+
+<script>
+
+( function(){
+	var dds = $('dd'); //VARIABLE QUE CONTIENE TODOS LOS DDS
+	dds.hide();//OCULTA LOS DETALLES
+	dds.eq(0).show(); //MUESTRA EL PRIMERO
+
+	$('dt').on('mouseenter', function(){
+		dds.slideUp(200); //CIERRA EL ELEMENTO DESDE EL ANCHO QUE TIENE HASTA EL ANCHO 0, EL NÚMERO ES EL TIEMPO QUE QUERAMOS DARLE
+		$(this)
+			.next()
+			.slideDown(200);
+	});
+
+})();
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

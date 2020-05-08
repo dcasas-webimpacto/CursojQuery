@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Objetos 101</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container text-center">
+	
+	<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
+	<hr>
+	
+	<button id="botEncender" class="btn btn-primary">Encender</button>
+	<button id="botApagar" class="btn btn-danger">Apagar</button>
+
+</div>
+
+
+<script>
+
+	var carro = {
+		encendido: false,
+		llantas:4,
+		puertas:5,
+		fabricante: {
+			creador:"Toyota",
+			telefono: "5555-555",
+			direccion: "XYZ Avenida 123"
+			},
+		colores: ["Azul","Blanco","Rojo","Negro"],
+		arrancar: function(){
+			if(carro.encendido){
+				console.log("El vehículo estaba encendido...");
+			}else{
+			console.log("Encendiendo el motor.");
+			carro.encendido = true;
+			}
+		},
+		apagar: function(){
+			if(carro.encendido === false){
+			console.log("El vehículo ya estaba apagado.");
+			}else{
+				console.log("Apagando el motor.");
+				carro.encendido=false;
+			}
+		},
+	};
+	//console.log(carro.fabricante.direccion); //LO QUE MUESTRA LA CONSOLA
+	$("#botEncender").on("click",function(){
+		carro.arrancar();
+	});
+
+	$("#botApagar").on("click",function(){
+		carro.apagar();
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
