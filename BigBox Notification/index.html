@@ -12,28 +12,33 @@
 	<!-- Importacion del Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+	
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="fontawesome/css/brands.min.css">
 	<link rel="stylesheet" href="fontawesome/css/regular.min.css">
-	<link rel="stylesheet" href="fontawesome/css/shims.min.css">
 	<link rel="stylesheet" href="fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 
 </head>
 <body>
-	<!-- <div class="bigBox-Fondo"></div> -->
 
-	<div class="bigBox-contenedor" align="center">
-		<div class="bigBox-Cerrar"><i class="fa fa-times"></i></div>
-		<div class="bigBox-Circulo"><i class="fa fa-thumbs-up fa-3x"></i></div>
-		<div class="bigBox-Contenido">
-			<span class="bigBox-Titulo">Genial!</span>
-			<span class="bigBox-Texto">Estamos listos para proceder usando Udemy!</span>
-		</div>
-		<button class="bigBox-Boton">Empezar curso</button>
 
+<!-- <div class="bigBox-Fondo"></div> -->
+
+
+
+<!-- <div class="bigBox-contenedor" align="center">
+	<div class="bigBox-Cerrar"> <i class="fa fa-times"></i> </div>
+	<div class="bigBox-Circulo"> <i class="fa fa-thumbs-up fa-3x"></i> </div>
+	<div class="bigBox-Contenido">
+		<span class="bigBox-Titulo">Genial!</span>
+		<span class="bigBox-Texto">Estamos listo para proceder usando Udemy</span>
 	</div>
+	<button class="bigBox-Boton">Empezar curso!</button>
+</div> -->
+
 
 
 <div class="container">
@@ -41,15 +46,25 @@
 	<h1>BigBox: <small>Notification</small></h1>
 	<hr>
 
+	<button class="btn btn-primary">Mostrar BigBox</button>
+
 
 </div>
 
+<script src="js/lib/bigBox.js"></script>
 <script>
-	$(".bigBox-Fondo").fadeIn(300);
+	$("button").on("click",function(){
+		$.bigBox({
+			fa: "fa-codiepie",
+			titulo: "Desde botón",
+			contenido: "Este es el contenido del bigbox.",
+			boton: "Ingresar a Udemy",
+		},function(boton){
+			console.log(boton);
+		});
+	});
+
 </script>
-
-
-
 
 
 
