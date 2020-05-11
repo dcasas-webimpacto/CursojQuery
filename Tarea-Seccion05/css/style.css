@@ -1,0 +1,57 @@
+.smallBox-contenedor{
+    position:fixed;
+    bottom:10px;
+    right: 10px;
+    /* width:400px; */
+    /* height: 250px; */
+    /* background-color: red; */
+}
+
+.smallBox-foto{
+    float:left;
+    margin-top: 45px;
+}
+.smallBox-foto img{
+    width: 100px;
+    height: 100px;
+}
+.smallBox-contenido{
+    float:left;
+}
+.smallBox-textoContenedor span{
+    display: block;
+}
+
+.smallBox-titulo{
+    font-size: 20px;
+    color:#5b5b5b;
+}
+
+
+.smallBox-cajaColor{
+    background-color: #699406;
+    margin-top: 45px;
+    color:white;
+    height: 100px;
+    line-height: 100px; /*SI PONEMOS LO MISMO EL TEXTO APARECE CENTRADO  */
+    overflow: hidden;
+}
+.smallBox-colorTexto{
+    font-size: 16px;
+    float: left;
+    margin-left: 25px;
+}
+.smallBox-colorIcon{
+    float: right;
+    width: 60px;
+    padding-top: 25px;
+
+    height: 60px;
+    line-height: 60px;
+
+    text-align: center;
+ 
+
+
+    background-color: #699406;
+}
