@@ -12,7 +12,12 @@
 	<!-- Importacion del Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="fontawesome/css/brands.min.css">
+	<link rel="stylesheet" href="fontawesome/css/regular.min.css">
+	<link rel="stylesheet" href="fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
 
 
@@ -24,26 +29,45 @@
 <div class="container">
 	
 	<h1>Peticiones Ajax, <small> jquery</small></h1>
-	<hr>
+    <hr>
+    <div class="text-right">
+        <a href="insert.html" class="btn btn-primary"><i class="fa fa-plus"></i>Insertar registro</a>
+    </div>
 
-	<form class="form-horizontal" id="frmData">
-		<label >Nombre</label>
-		<input type="text" name="txtnombre" class="form-control">
-		<label >Estado</label>
-		<select name="cmbestado" class="form-control">
-			<option value="activo">Activo</option>
-			<option value="eliminado">Eliminado</option>
-		</select>
-		<br>
-		<button type="submit" class="btn btn-primary">Guardar</button>
-	</form>
-	
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td class="w50">ID</td>
+                <td>Nombre</td>
+                <td class="w50">Actualizar</td>
+                <td class="w50">Eliminar</td>
+            </tr>
+        </thead>
+        <tbody id="tblRegistros">
+            <!-- <tr>
+                <td>3</td>
+                <td>Fernando</td>
+                <td class="text-center">
+                    <a href="" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                </td>
+                <td class="text-center">
+                    <a href="" data-id="1" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr> -->
+
+
+        </tbody>
+
+
+    </table>
+
+
 
 </div>
 
 
 
-<script src="js/ajax.js"></script>
+<script src="js/select.js"></script>
 
 
 
